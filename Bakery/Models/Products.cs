@@ -13,12 +13,21 @@ namespace Products
     {
       if (breadAmount >= 3)
       {
-        breadAmount = (breadAmount/3)*2+ breadAmount%3;
+        breadAmount = (breadAmount/3) * 2+ breadAmount % 3;
       }
       int breadCost = (breadAmount * 5);
 
       return breadCost;
     }
+  }
 
+  public class Pastry
+  {
+    public int Pastries {get; set;}
+
+    public Pastry(int pastries)
+    {
+
+    }
   }
 }

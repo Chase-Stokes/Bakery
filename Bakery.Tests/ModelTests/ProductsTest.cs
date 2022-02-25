@@ -22,4 +22,18 @@ namespace Products.TestsTools
       Assert.AreEqual(10, Bread.CostForBread(breadOrder.Loaves));
     }
   }
+
+  [TestClass]
+  
+  public class PastryTests
+  {
+    [TestMethod]
+
+    public void Pastry_ChecksPastriesProperty_1()
+    {
+      Pastry pastryOrder = new Pastry(1);
+      Assert.AreEqual(1, pastryOrder.Pastries);
+    }
+
+  }
 }

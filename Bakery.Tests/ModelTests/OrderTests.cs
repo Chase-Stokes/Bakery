@@ -18,7 +18,7 @@ namespace BakeryOrder.TestsTools
       Order newOrder = new Order(1,2);
       Assert.AreEqual(1, newOrder.Bread);
     }
-   
+  
     [TestMethod]
     public void Order_ChecksPastryProperty_2()
     {
