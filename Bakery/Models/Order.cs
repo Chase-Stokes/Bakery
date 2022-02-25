@@ -5,9 +5,10 @@ namespace BakeryOrder
 {
   public class Order
   {
-    public string OrderBread(string input)
+    private static List<string> _breadList = new List<string>{};
+    public static List<string> OrderBread(string input)
     {
-      return "good fail";
+      return _breadList;
     }
   }
 }

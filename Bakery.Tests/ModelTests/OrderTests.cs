@@ -11,9 +11,9 @@ namespace Order.Tests
     [TestMethod]
     public void OrderBread_CreatesBreadList_BreadList()
     {
-      List<string> breadList = new List<string> {};
+      List<string> _breadList = new List<string> {};
 
-      Assert.AreEqual(typeof(List<>), breadList.GetType());
+      Assert.AreEqual(typeof(List<string>), _breadList.GetType());
     }
   }
 }
