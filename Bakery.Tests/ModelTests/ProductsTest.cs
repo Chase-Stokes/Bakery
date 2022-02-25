@@ -24,7 +24,7 @@ namespace Products.TestsTools
   }
 
   [TestClass]
-  
+
   public class PastryTests
   {
     [TestMethod]
@@ -33,6 +33,14 @@ namespace Products.TestsTools
     {
       Pastry pastryOrder = new Pastry(1);
       Assert.AreEqual(1, pastryOrder.Pastries);
+    }
+
+    [TestMethod]
+
+    public void CostForPastries_ChecksForPastryDiscount_10()
+    {
+      Pastry pastryOrder = new Pastry(6);
+      Assert.AreEqual(10, Pastry.CostForPastries(pastryOrder.Pastries));
     }
 
   }

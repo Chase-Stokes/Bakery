@@ -29,5 +29,11 @@ namespace Products
     {
       Pastries = pastries;
     }
+
+    public static int CostForPastries(int pastryAmount)
+    {
+      int pastryCost = (pastryAmount * 2);
+      return pastryCost;
+    }
   }
 }
