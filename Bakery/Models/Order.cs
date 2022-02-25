@@ -8,6 +8,7 @@ namespace BakeryOrder
     public Order(int bread, int pastry)
     {
       Bread = bread;
+      Pastry = pastry;
     }
 
   }
