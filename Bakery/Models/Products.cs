@@ -27,7 +27,7 @@ namespace Products
 
     public Pastry(int pastries)
     {
-
+      Pastries = pastries;
     }
   }
 }
