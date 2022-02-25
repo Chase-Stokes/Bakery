@@ -15,5 +15,13 @@ namespace Order.Tests
 
       Assert.AreEqual(typeof(List<string>), _breadList.GetType());
     }
+    
+    [TestMethod]
+    public void OrderPastry_CreatesPastryList_PastryList()
+    {
+      List<string> _pastryList = Order.OrderPastry();
+
+      Assert.AreEqual(typeof(List<string>), _pastryList.GetType());
+    }
   }
 }
