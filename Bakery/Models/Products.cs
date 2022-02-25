@@ -5,7 +5,7 @@ namespace Products
     public int Loaves {get; set;}
     public Bread(int loaves)
     {
-
+      Loaves = loaves;
     }
 
   }
