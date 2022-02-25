@@ -1,27 +1,16 @@
-using System;
-using System.Collections.Generic;
-using BakeryOrder;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using BakeryOrder;
 
-namespace Order.Tests
+namespace BakeryOrder.TestsTools
 {
   [TestClass]
   public class OrderTests
   {
     [TestMethod]
-    public void OrderBread_CreatesBreadList_BreadList()
+    public void Order_CreatesInstanceOfOrder_Order()
     {
-      List<string> _breadList = new List<string> {};
-
-      Assert.AreEqual(typeof(List<string>), _breadList.GetType());
-    }
-    
-    [TestMethod]
-    public void OrderPastry_CreatesPastryList_PastryList()
-    {
-      List<string> _pastryList = Order.OrderPastry();
-
-      Assert.AreEqual(typeof(List<string>), _pastryList.GetType());
+      Order newOrder = new Order(1,2);
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
   }
 }

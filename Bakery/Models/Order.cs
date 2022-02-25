@@ -1,14 +1,13 @@
-using System.Collections.Generic;
-using System;
-
 namespace BakeryOrder
 {
   public class Order
   {
-    public static List<string> _breadList = new List<string>{};
-    public static List<string> OrderBread(string input)
+    public int Bread{get; set;}
+    public int Pastry{get; set;}
+
+    public Order(int bread, int pastry)
     {
-      return _breadList;
     }
+
   }
 }
