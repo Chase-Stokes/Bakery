@@ -1,3 +1,5 @@
+using System;
+
 namespace Products
 {
   public class Bread
@@ -32,8 +34,11 @@ namespace Products
 
     public static int CostForPastries(int pastryAmount)
     {
-      int pastryCost = (pastryAmount * 2);
+      int discountForThree = (pastryAmount/3) * 5;
+      int leftOver = (pastryAmount%3) * 2;
+      int pastryCost = discountForThree + leftOver;
       return pastryCost;
     }
   }
 }
+//Pastry: Buy 1 for $2 or 3 for $5. Four pastries costs $7, five pastries costs $9, and six pastries costs $10.
