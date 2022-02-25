@@ -11,7 +11,13 @@ namespace Products
 
     public static int CostForBread(int breadAmount)
     {
-      return BasePrice;
+      if (breadAmount >= 3)
+      {
+        breadAmount = (breadAmount/3)*2+ breadAmount%3;
+      }
+      int breadCost = (breadAmount * 5);
+
+      return breadCost;
     }
 
   }
