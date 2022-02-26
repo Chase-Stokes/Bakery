@@ -21,52 +21,38 @@ namespace PierresBakery
       Console.WriteLine("Pastries are 1 for $2 or 3 for $5!");
       Console.WriteLine("~~~~~~~~~~~~~~~~~~");
       Console.WriteLine("~~~~~~~~~~~~~~~~~~");
-      Console.WriteLine("Would you like some pastries or bread?    type:{pastry/bread}");
+      Console.WriteLine("Thank you for shopping with us!  Type anything to continue..}");
       Console.WriteLine("To leave at anytime.   type:{EXIT}");
       string input = Console.ReadLine();
-      while(input != "EXIT" || input != null)
+      while(input != "EXIT")
       {
+        Console.WriteLine("Would you like some pastries, bread, or directions to the door?    type:{pastry/bread/leave}");
+        input = Console.ReadLine();
         int pastryAmount = 0;
         int breadAmount = 0;
         if (input.ToLower() == "pastry")
         {
-          Console.WriteLine("Enter an amount of pastries, or type :{bread/pay} to order bread or checkout.");
-          if (Console.ReadLine().ToLower() == "bread")
-          {
-            input = "bread";
-          }
-          else if (Console.ReadLine().ToLower() == "pay")
-          {
-            input = "pay";
-          }
-          else 
-          {
-            pastryAmount = int.Parse(Console.ReadLine());
-          }
+          Console.WriteLine("Enter amount of pastries: ");
+          pastryAmount += int.Parse(Console.ReadLine());
+          // Console.WriteLine(pastryAmount + " pastryAmount ");
         }
         else if (input.ToLower() == "bread")
         {
-          Console.WriteLine("Enter an amount of loaves, or type :{bread/pay} to order bread or checkout.");
-          if (Console.ReadLine().ToLower() == "pastry")
-          {
-            input = "pastry";
-          }
-          else if (Console.ReadLine().ToLower() == "pay")
-          {
-            input = "pay";
-          }
-          else 
-          {
-            breadAmount = int.Parse(Console.ReadLine());
-          }
+          Console.WriteLine("How many loaves of bread would you like: ");
+          breadAmount += int.Parse(Console.ReadLine());
+          // Console.WriteLine(breadAmount + " breadAmount ");
         }
-        else if (input.ToLower() == "pay")
+        else if (input.ToLower() == "leave")
         {
+          Console.WriteLine(pastryAmount + " pastryAmount ");
+          Console.WriteLine(breadAmount + " breadAmount ");
         Order user = new Order(breadAmount, pastryAmount);
+        Console.WriteLine(user + " user");
         Bread breadOrder= new Bread(user.Bread);
         Pastry pastryOrder = new Pastry(user.Pastry);
         int breadCost = Bread.CostForBread(breadOrder.Loaves);
         int pastryCost = Pastry.CostForPastries(pastryOrder.Pastries);
+        Console.WriteLine(breadCost + " breadCost " + pastryCost + " pastryCost ");
         int total = breadCost + pastryCost;
         Console.WriteLine("Your total is $"+total);
         Console.WriteLine("Thank you for shopping with us!");
