@@ -6,10 +6,10 @@
 
 ## Technologies Used
 
-*_C#_
-*_Markdown_
-*_.NET_
-*_MSTest_
+* _C#_
+* _Markdown_
+* _.NET_
+* _MSTest_
 
 ## Description
 
